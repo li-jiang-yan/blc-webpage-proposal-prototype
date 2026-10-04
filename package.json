@@ -1,0 +1,22 @@
+{
+  "name": "blc-webpage-proposal-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "node scripts/lint-html.mjs",
+    "lint:css": "stylelint \"**/*.css\" --allow-empty-input --max-warnings 0",
+    "lint:js": "eslint . --max-warnings 0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.12.0",
+    "globals": "17.13.0",
+    "html-validate": "11.16.2",
+    "stylelint": "17.16.0",
+    "stylelint-config-standard": "40.0.0"
+  }
+}
