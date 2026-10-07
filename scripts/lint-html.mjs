@@ -2,7 +2,17 @@ import { globSync } from "node:fs";
 import { HtmlValidate } from "html-validate";
 
 const files = globSync("**/*.html", {
-  exclude: ["node_modules/**", ".git/**", "dist/**", "coverage/**"],
+  exclude: [
+    "node_modules/**",
+    ".git/**",
+    "dist/**",
+    "coverage/**",
+    "_site/**",
+    "_layouts/**",
+    "_includes/**",
+    ".jekyll-cache/**",
+    "vendor/**",
+  ],
 });
 
 if (files.length === 0) {
