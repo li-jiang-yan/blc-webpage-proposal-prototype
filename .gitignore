@@ -3,3 +3,9 @@ node_modules/
 dist/
 coverage/
 *.log
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile.lock
