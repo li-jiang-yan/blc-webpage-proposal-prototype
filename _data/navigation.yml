@@ -1,0 +1,36 @@
+- name: Home
+  link: /
+- name: History
+  link: /en/our-history/
+- name: Ministries
+  link: "#"
+  children:
+    - name: Care Groups
+      link: /en/care-groups/
+    - name: International Fellowship
+      link: /en/international-fellowship/
+    - name: Seniors Fellowship
+      link: /en/seniors-fellowship/
+    - name: Sunday School
+      link: /en/children/
+    - name: Youth
+      link: /en/youth/
+- name: Missions
+  link: /en/mission-board/
+- name: Wedding Enquiries
+  link: /en/wedding-enquiries/
+- name: Contact Us
+  link: /en/contact-us/
+- name: Giving
+  link: /en/giving/
+- name: Links
+  link: "#"
+  children:
+    - name: Our Stained Glass
+      link: /en/our-stained-glass/
+    - name: Lutheran Church of Singapore (LCS)
+      link: https://lutheran.org.sg/
+    - name: LCS' PDPA Policy
+      link: https://lutheran.org.sg/2019/05/21/lcs-pdpa-policy/
+- name: Chinese (中文)
+  link: /zh/

@@ -1,0 +1,36 @@
+- name: 首页
+  link: /zh/
+- name: 本堂历史
+  link: /zh/our-history/
+- name: 各部团契
+  link: "#"
+  children:
+    - name: 关怀小组
+      link: /zh/care-groups/
+    - name: 国际团契
+      link: /zh/international-fellowship/
+    - name: 乐龄团契
+      link: /zh/seniors-fellowship/
+    - name: 主日学
+      link: /zh/children/
+    - name: 青少年团契
+      link: /zh/youth/
+- name: 宣传组
+  link: /zh/mission-board/
+- name: 婚礼借堂
+  link: /zh/wedding-enquiries/
+- name: 联络我们
+  link: /zh/contact-us/
+- name: 奉献
+  link: /zh/giving/
+- name: 链接
+  link: "#"
+  children:
+    - name: 本堂花窗玻璃
+      link: /zh/our-stained-glass/
+    - name: 新加坡信义会
+      link: https://lutheran.org.sg/
+    - name: 新加坡信义会个人数据保护法政策
+      link: https://lutheran.org.sg/2019/05/21/lcs-pdpa-policy/
+- name: 英文 (English)
+  link: /
