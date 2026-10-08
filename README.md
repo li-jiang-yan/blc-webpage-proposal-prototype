@@ -1,6 +1,8 @@
 # BLC Webpage Proposal Prototype
 A proposal prototype to revamp Bedok Lutheran Church's webpage
 
+[https://li-jiang-yan.github.io/blc-webpage-proposal-prototype/](https://li-jiang-yan.github.io/blc-webpage-proposal-prototype/)
+
 ## Code checks
 
 Install Node.js 24 or later, then run:
