@@ -1,36 +1,36 @@
 - name: Home
-  link: /
+  link: /blc-webpage-proposal-prototype/
 - name: History
-  link: /en/our-history/
+  link: /blc-webpage-proposal-prototype/en/our-history/
 - name: Ministries
   link: "#"
   children:
     - name: Care Groups
-      link: /en/care-groups/
+      link: /blc-webpage-proposal-prototype/en/care-groups/
     - name: International Fellowship
-      link: /en/international-fellowship/
+      link: /blc-webpage-proposal-prototype/en/international-fellowship/
     - name: Seniors Fellowship
-      link: /en/seniors-fellowship/
+      link: /blc-webpage-proposal-prototype/en/seniors-fellowship/
     - name: Sunday School
-      link: /en/children/
+      link: /blc-webpage-proposal-prototype/en/children/
     - name: Youth
-      link: /en/youth/
+      link: /blc-webpage-proposal-prototype/en/youth/
 - name: Missions
-  link: /en/mission-board/
+  link: /blc-webpage-proposal-prototype/en/mission-board/
 - name: Wedding Enquiries
-  link: /en/wedding-enquiries/
+  link: /blc-webpage-proposal-prototype/en/wedding-enquiries/
 - name: Contact Us
-  link: /en/contact-us/
+  link: /blc-webpage-proposal-prototype/en/contact-us/
 - name: Giving
-  link: /en/giving/
+  link: /blc-webpage-proposal-prototype/en/giving/
 - name: Links
   link: "#"
   children:
     - name: Our Stained Glass
-      link: /en/our-stained-glass/
+      link: /blc-webpage-proposal-prototype/en/our-stained-glass/
     - name: Lutheran Church of Singapore (LCS)
       link: https://lutheran.org.sg/
     - name: LCS' PDPA Policy
       link: https://lutheran.org.sg/2019/05/21/lcs-pdpa-policy/
 - name: Chinese (中文)
-  link: /zh/
+  link: /blc-webpage-proposal-prototype/zh/
