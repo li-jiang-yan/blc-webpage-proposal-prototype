@@ -15,7 +15,7 @@
     {% if page.url contains "/zh/" %} {% assign navigation = site.data.navigation_zh %} {% else %} {% assign navigation
     = site.data.navigation %} {% endif %}
 
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs mx-0">
       {% for item in navigation %} {% if item.children %}
       <li class="nav-item dropdown">
         <a
