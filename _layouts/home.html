@@ -4,15 +4,9 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h2 class="page-heading">
-      {% if page.url contains "/zh/" %}
-        您好！
-      {% else %}
-        Welcome!
-      {% endif %}
-    </h2>
-  {%- endif -%}
-
-  {{ content }}
-
+  <h2 class="page-heading">
+    {% if page.url contains "/zh/" %} 您好！
+    {% else %} Welcome! {% endif %}
+  </h2>
+  {%- endif -%} {{ content }}
 </div>
