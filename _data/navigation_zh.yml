@@ -1,36 +1,36 @@
 - name: 首页
-  link: /blc-webpage-proposal-prototype/zh/
+  link: /zh/
 - name: 本堂历史
-  link: /blc-webpage-proposal-prototype/zh/our-history/
+  link: /zh/our-history/
 - name: 各部团契
   link: "#"
   children:
     - name: 关怀小组
-      link: /blc-webpage-proposal-prototype/zh/care-groups/
+      link: /zh/care-groups/
     - name: 国际团契
-      link: /blc-webpage-proposal-prototype/zh/international-fellowship/
+      link: /zh/international-fellowship/
     - name: 乐龄团契
-      link: /blc-webpage-proposal-prototype/zh/seniors-fellowship/
+      link: /zh/seniors-fellowship/
     - name: 主日学
-      link: /blc-webpage-proposal-prototype/zh/children/
+      link: /zh/children/
     - name: 青少年团契
-      link: /blc-webpage-proposal-prototype/zh/youth/
+      link: /zh/youth/
 - name: 宣传组
-  link: /blc-webpage-proposal-prototype/zh/mission-board/
+  link: /zh/mission-board/
 - name: 婚礼借堂
-  link: /blc-webpage-proposal-prototype/zh/wedding-enquiries/
+  link: /zh/wedding-enquiries/
 - name: 联络我们
-  link: /blc-webpage-proposal-prototype/zh/contact-us/
+  link: /zh/contact-us/
 - name: 奉献
-  link: /blc-webpage-proposal-prototype/zh/giving/
+  link: /zh/giving/
 - name: 链接
   link: "#"
   children:
     - name: 本堂花窗玻璃
-      link: /blc-webpage-proposal-prototype/zh/our-stained-glass/
+      link: /zh/our-stained-glass/
     - name: 新加坡信义会
       link: https://lutheran.org.sg/
     - name: 新加坡信义会个人数据保护法政策
       link: https://lutheran.org.sg/2019/05/21/lcs-pdpa-policy/
 - name: 英文 (English)
-  link: /blc-webpage-proposal-prototype/
+  link: /
