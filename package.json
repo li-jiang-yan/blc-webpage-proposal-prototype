@@ -5,12 +5,6 @@
   "engines": {
     "node": ">=24"
   },
-  "scripts": {
-    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
-    "lint:html": "node scripts/lint-html.mjs",
-    "lint:css": "stylelint \"**/*.css\" --allow-empty-input --max-warnings 0",
-    "lint:js": "eslint . --max-warnings 0"
-  },
   "devDependencies": {
     "@biomejs/biome": "2.5.15"
   }
