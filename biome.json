@@ -9,20 +9,18 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!_site",
+      "!404.html",
       "!_site",
       "!.jekyll-cache",
-      "!.jekyll-cache",
       "!.sass-cache",
-      "!.sass-cache",
-      "!vendor",
       "!vendor"
     ]
   },
   "formatter": {
     "enabled": true,
     "formatWithErrors": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "lineEnding": "crlf"
   },
   "linter": {
     "enabled": false,

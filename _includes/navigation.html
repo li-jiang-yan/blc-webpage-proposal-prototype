@@ -16,28 +16,30 @@
     = site.data.navigation %} {% endif %}
 
     <ul class="nav nav-tabs mx-0">
-      {% for item in navigation %} {% if item.children %}
+      {% for item in navigation %} {% if item.link contains "https://" or item.link == "#" %} {% assign item_url =
+      item.link %} {% else %} {% assign item_url = item.link | relative_url %} {% endif %} {% if item.children %}
       <li class="nav-item dropdown">
         <a
           class="nav-link dropdown-toggle"
           data-bs-toggle="dropdown"
-          href="{{ item.link }}"
+          href="{{ item_url }}"
           role="button"
           aria-expanded="false"
         >
           {{ item.name }}
         </a>
         <ul class="dropdown-menu">
-          {% for child in item.children %}
+          {% for child in item.children %} {% if child.link contains "https://" or child.link == "#" %} {% assign
+          child_url = child.link %} {% else %} {% assign child_url = child.link | relative_url %} {% endif %}
           <li>
-            <a class="dropdown-item" href="{{ child.link }}">{{ child.name }}</a>
+            <a class="dropdown-item" href="{{ child_url }}">{{ child.name }}</a>
           </li>
           {% endfor %}
         </ul>
       </li>
       {% else %}
       <li class="nav-item">
-        <a class="nav-link" href="{{ item.link }}">{{ item.name }}</a>
+        <a class="nav-link" href="{{ item_url }}">{{ item.name }}</a>
       </li>
       {% endif %} {%- endfor -%}
     </ul>
