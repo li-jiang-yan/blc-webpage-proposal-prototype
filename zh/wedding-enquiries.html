@@ -1,0 +1,141 @@
+---
+layout: page
+title: 婚礼借堂
+permalink: /zh/wedding-enquiries/
+---
+
+<div id="carouselWed" class="carousel slide mb-3" data-bs-ride="carousel" style="max-width: 600px;">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselWed"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button type="button" data-bs-target="#carouselWed" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ '/assets/images/Wed3.jpg' | relative_url }}">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ '/assets/images/Web4.jpg' | relative_url }}">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWed" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselWed" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<p>我们的教会圣堂开放预订举办婚礼 🙂</p>
+
+<h6>注意事项</h6>
+
+<ul>
+  <li>教堂<strong style="color: #ff0000;">仅在周六</strong>开放供婚礼使用。</li>
+  <li>
+    教堂在平日、周日、公众假期、十二月份和大斋季节期间不开放预订。
+    <ul id="lentList"></ul>
+  </li>
+</ul>
+
+<p>
+  如需进一步说明，还是申请婚礼日期，请下载填写申请表格，出席者表格，然后发送邮件给我们
+  <a href="mailto:blc_admin@lutheran.org.sg">blc_admin@lutheran.org.sg</a>，我们会尽快给您回复。
+</p>
+
+<p>请留意预订也取决于教会实施的限制。</p>
+
+<h6>下载链接</h6>
+
+<ul>
+  <li>
+    <a href="{{ '/assets/documents/Wedding-Application-Form.docx' | relative_url }}" target="_blank" rel="noopener"
+      >申请表格</a
+    >
+  </li>
+  <li>
+    <a
+      href="{{ '/assets/documents/Wedding-Rules-and-Regulations24_14-Jul-2024-1.docx' | relative_url }}"
+      target="_blank"
+      rel="noopener"
+      >规则与规定</a
+    >
+  </li>
+</ul>
+
+<script>
+function easterSunday(y) {
+  // Gregorian Easter calculation (Meeus/Jones/Butcher algorithm)
+  const a = y % 19;
+  const b = Math.floor(y / 100);
+  const c = y % 100;
+  const d = Math.floor(b / 4);
+  const e = b % 4;
+  const f = Math.floor((b + 8) / 25);
+  const g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4);
+  const k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const month = Math.floor((h + l - 7 * m + 114) / 31); // 3 = March, 4 = April
+  const day = ((h + l - 7 * m + 114) % 31) + 1;
+
+  return new Date(y, month - 1, day);
+}
+
+function lentDates(y) {
+  const easter = easterSunday(y);
+  const ashWednesday = new Date(easter);
+  ashWednesday.setDate(easter.getDate() - 46);
+
+  const maundyThursday = new Date(easter);
+  maundyThursday.setDate(easter.getDate() - 3);
+
+  const goodFriday = new Date(easter);
+  goodFriday.setDate(easter.getDate() - 2);
+
+  return { ashWednesday, maundyThursday, goodFriday, easterSunday: easter };
+}
+
+function getUpcomingLentDates(from = new Date()) {
+  const year = from.getFullYear();
+
+  let dates = lentDates(year);
+  if (dates.maundyThursday < new Date(from.getFullYear(), from.getMonth(), from.getDate())) {
+    dates = lentDates(year + 1);
+  }
+
+  return dates;
+}
+
+function formatDate(date) {
+  const day = date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+
+  return `${year} 年 ${month + 1} 月 ${day} 日`;
+}
+
+function formatLentDates(dates) {
+  const result = document.createElement("li");
+  const ashWednesday = dates.ashWednesday;
+  const maundyThursday = dates.maundyThursday;
+  result.textContent = `${ashWednesday.getFullYear()} 大斋季节：${formatDate(ashWednesday)} 至 ${formatDate(maundyThursday)}`;
+  return result;
+}
+
+const lentList = document.getElementById("lentList");
+const upcomingLentDates = getUpcomingLentDates();
+const futureLentDates = lentDates(upcomingLentDates.maundyThursday.getFullYear() + 1);
+
+lentList.replaceChildren(formatLentDates(upcomingLentDates), formatLentDates(futureLentDates));
+</script>
