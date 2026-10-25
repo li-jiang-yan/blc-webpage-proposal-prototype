@@ -1,5 +1,5 @@
 ---
 layout: page
 title: Sunday School
-permalink: /en/children/
+permalink: /en/em/children/
 ---
