@@ -1,5 +1,5 @@
 ---
 layout: page
 title: 乐龄团契
-permalink: /zh/seniors-fellowship/
+permalink: /zh/cm/seniors-fellowship/
 ---

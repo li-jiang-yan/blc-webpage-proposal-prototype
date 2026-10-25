@@ -1,5 +1,5 @@
 ---
 layout: page
 title: Seniors Fellowship
-permalink: /en/seniors-fellowship/
+permalink: /en/em/seniors-fellowship/
 ---

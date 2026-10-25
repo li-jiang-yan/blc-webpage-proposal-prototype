@@ -5,16 +5,32 @@
 - name: Ministries
   link: "#"
   children:
-    - name: Care Groups
-      link: /en/care-groups/
-    - name: International Fellowship
-      link: /en/international-fellowship/
-    - name: Seniors Fellowship
-      link: /en/seniors-fellowship/
-    - name: Sunday School
-      link: /en/children/
-    - name: Youth
-      link: /en/youth/
+    - name: English Ministry
+      link: "#"
+      children:
+        - name: Care Groups
+          link: /en/em/care-groups/
+        - name: International Fellowship
+          link: /en/em/international-fellowship/
+        - name: Seniors Fellowship
+          link: /en/em/seniors-fellowship/
+        - name: Sunday School
+          link: /en/em/children/
+        - name: Youth (SNP)
+          link: /en/em/youth-snp/
+    - name: Chinese Ministry
+      link: "#"
+      children:
+        - name: Sunday School
+          link: /en/cm/sunday-school/
+        - name: Seniors Fellowship
+          link: /en/cm/seniors-fellowship/
+        - name: Joshua Fellowship
+          link: /en/cm/joshua-fellowship/
+        - name: Sisters Fellowship
+          link: /en/cm/sisters-fellowship/
+        - name: Youth Fellowship
+          link: /en/cm/youth-fellowship/
 - name: Missions
   link: /en/mission-board/
 - name: Wedding Enquiries
