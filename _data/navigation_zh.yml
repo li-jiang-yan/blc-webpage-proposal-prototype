@@ -5,16 +5,32 @@
 - name: 各部团契
   link: "#"
   children:
-    - name: 关怀小组
-      link: /zh/care-groups/
-    - name: 国际团契
-      link: /zh/international-fellowship/
-    - name: 乐龄团契
-      link: /zh/seniors-fellowship/
-    - name: 主日学
-      link: /zh/children/
-    - name: 青少年团契
-      link: /zh/youth/
+    - name: 中文部
+      link: "#"
+      children:
+        - name: 主日学
+          link: /zh/cm/sunday-school/
+        - name: 乐龄团契
+          link: /zh/cm/seniors-fellowship/
+        - name: 约书亚团契
+          link: /zh/cm/joshua-fellowship/
+        - name: 姐妹团契
+          link: /zh/cm/sisters-fellowship/
+        - name: 青少年团契
+          link: /zh/cm/youth-fellowship/
+    - name: 英文部
+      link: "#"
+      children:
+        - name: 关怀小组
+          link: /zh/em/care-groups/
+        - name: 国际团契
+          link: /zh/em/international-fellowship/
+        - name: 乐龄团契
+          link: /zh/em/seniors-fellowship/
+        - name: 主日学
+          link: /zh/em/children/
+        - name: 青少年团契（盐和胡椒）
+          link: /zh/em/youth-snp/
 - name: 宣传组
   link: /zh/mission-board/
 - name: 婚礼借堂
