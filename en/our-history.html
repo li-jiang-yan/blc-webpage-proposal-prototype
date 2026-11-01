@@ -4,6 +4,124 @@ title: History
 permalink: /en/our-history/
 ---
 
+<style>
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2 {
+  position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #808080;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-2 {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-2::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -11px;
+  background-color: #808080;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left-2 {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+/* Place the container to the right */
+.right-2 {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-2::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-2::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-2::after {
+  left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .main-timeline-2::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-2 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-2::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left-2::after,
+  .right-2::after {
+    left: 18px;
+  }
+
+  .left-2::before {
+    right: auto;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right-2 {
+    left: 0%;
+  }
+}
+</style>
+
 <img src="{{ '/assets/images/OurHistory.jpg' | relative_url }}" alt="" class="mb-3 img-fluid w-100">
 
 <p>
@@ -19,37 +137,35 @@ permalink: /en/our-history/
   the Great Commission in Bedok, unhindered by their varied backgrounds and occupations.
 </p>
 
-<h6>June 1977</h6>
-<p>
-  Lutheran Church in Malaysia and Singapore (LCMS) appointed a committee to plan and discuss in starting a congregation
-  in Bedok.
-</p>
-
-<h6>July 1978</h6>
-<p>
-  Pastor and Mrs John T. Nelson arrived in Singapore, having assigned by the Lutheran Church to the new work in Bedok.
-</p>
-
-<h6>1 November 1978</h6>
-<p>The church rented No. 1 Jalan Tanjong to serve as a centre for the work.</p>
-
-<h6>12 November 1978</h6>
-<p>
-  The first meeting was held. David Wang led 25 worshippers in that Thanksgiving Service with Pastor Nelson preaching
-  the sermon.
-</p>
-
-<h6>27 May 1979</h6>
-<p>The first church council was elected.</p>
-
-<h6>August 1979</h6>
-<p>Tender was accepted by H.D.B. to build a church in Bedok.</p>
-
-<h6>1 May 1980</h6>
-<p>A service was held to bless the church site and to break ground for the building.</p>
-
-<h6>September 1981</h6>
-<p>First worship service held in the new building.</p>
-
-<h6>31 October 1981</h6>
-<p>The new church building was dedicated by Bishop Peter Foong.</p>
+<section>
+  <div class="container py-3">
+    <div class="main-timeline-2">
+      {% for event in site.data.our_history %} {% assign remainder = forloop.index | modulo: 2 %} {% if remainder == 1
+      %}
+      <div class="timeline-2 left-2">
+        <div class="card">
+          {% if event.img_src %}
+          <img src="{{ event.img_src | relative_url }}" class="card-img-top">
+          {% endif %}
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">{{ event.date_en }}</h4>
+            <p class="mb-0">{{ event.description_en }}</p>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="timeline-2 right-2">
+        <div class="card">
+          {% if event.img_src %}
+          <img src="{{ event.img_src | relative_url }}" class="card-img-top">
+          {% endif %}
+          <div class="card-body p-4">
+            <h4 class="fw-bold mb-4">{{ event.date_en }}</h4>
+            <p class="mb-0">{{ event.description_en }}</p>
+          </div>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+</section>
