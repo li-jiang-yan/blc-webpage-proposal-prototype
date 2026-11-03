@@ -1,0 +1,13 @@
+- name: Salt and Pepper Youth
+  link: /youth-snp/
+  thumbnail: /assets/images/snp_youth.jpg
+- name: Young Adults CGs
+- name: Adults CGs
+- name: Young Families CGs
+- name: International Fellowship
+  link: /international-fellowship/
+  thumbnail: /assets/images/international_fellowship.jpg
+- name: Seniors Fellowship
+  link: /seniors-fellowship/
+  thumbnail: /assets/images/seniors_fellowship.png
+- name: Tamil Fellowship
