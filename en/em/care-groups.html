@@ -22,7 +22,7 @@ permalink: /en/em/care-groups/
   {% for ministry in site.data.em_ministries %}
   <div class="col-xs-12 col-sm-6 col-md-4 py-3 care-group-col" style="aspect-ratio: 1 / 1;">
     {% if ministry.link %}
-    <a href="{{ '/en/em' | append: ministry.link | relative_url }}" class="text-decoration-none">
+    <a href="{{ ministry.link | relative_url }}" class="text-decoration-none">
       {% endif %} {% if ministry.thumbnail %}
       <div class="position-relative overflow-hidden w-100" style="aspect-ratio: 1 / 1;">
         <!-- The Background Image -->
