@@ -4,7 +4,7 @@ title: 本堂花窗玻璃
 permalink: /zh/our-stained-glass/
 ---
 
-<div id="carouselStainedGlass" class="carousel slide" style="--bs-carousel-control-icon-filter: invert(1);">
+<div id="carouselStainedGlass" class="carousel slide">
   <div class="carousel-indicators" data-bs-theme="dark" style="position: static;">
     {% for item in site.data.our_stained_glass %} {% if forloop.index == 1 %}
     <button
@@ -27,9 +27,9 @@ permalink: /zh/our-stained-glass/
   <div class="carousel-inner">
     {% for item in site.data.our_stained_glass %}
     {% if forloop.index == 1 %}
-    <div class="carousel-item active">
+    <div class="carousel-item active" style="background-color: black;">
     {% else %}
-    <div class="carousel-item">
+    <div class="carousel-item" style="background-color: black;">
     {% endif %}
       <img src="{{ item.src | relative_url }}" style="display: block; height: auto; max-height: 600px; max-width: 100%; object-fit: contain; margin-inline: auto;">
     </div>
