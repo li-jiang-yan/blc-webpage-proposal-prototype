@@ -22,15 +22,15 @@
       link: "#"
       children:
         - name: 关怀小组
-          link: /zh/em/care-groups/
+          link: /en/em/care-groups/
         - name: 国际团契
-          link: /zh/em/international-fellowship/
+          link: /en/em/international-fellowship/
         - name: 乐龄团契
-          link: /zh/em/seniors-fellowship/
+          link: /en/em/seniors-fellowship/
         - name: 主日学
-          link: /zh/em/children/
+          link: /en/em/children/
         - name: 青少年团契（盐和胡椒）
-          link: /zh/em/youth-snp/
+          link: /en/em/youth-snp/
 - name: 宣教组
   link: /zh/mission-board/
 - name: 婚礼借堂
